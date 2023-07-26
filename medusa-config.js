@@ -45,6 +45,7 @@ const plugins = [
     resolve: `@medusajs/file-local`,
     options: {
       upload_dir: "uploads",
+      backend_url: 'http://192.168.1.201:9000', 
     },
   },
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
