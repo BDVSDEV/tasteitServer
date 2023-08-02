@@ -7,16 +7,20 @@ const loaders = require("@medusajs/medusa/dist/loaders/index").default;
 (async () => {
   async function start() {
     const app = express();
-    
-    // Add the cors middleware with specific configuration
-    app.use(cors({
-      origin: "http://192.168.1.202:8000", // Replace with your allowed origin
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
-      credentials: true,
-    }));
 
-    const directory = process.cwd()
+    app.use(express.json()); // json object form(web server format)
+    app.use(express.urlencoded({ extended: true })); 
+    // Add the cors middleware with specific configuration
+    app.use(
+      cors({
+        origin: true, // Replace with your allowed origin
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+        credentials: true,
+      })
+    );
+
+    const directory = process.cwd();
     try {
       const { container } = await loaders({
         directory,
