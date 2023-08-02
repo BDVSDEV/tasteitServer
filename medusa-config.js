@@ -83,10 +83,10 @@ const modules = {
 const projectConfig = {
   jwtSecret: process.env.JWT_SECRET,
   cookieSecret: process.env.COOKIE_SECRET,
-  store_cors: process.env.STORE_CORS,
-  database_url: process.env.DATABASE_URL,
+  store_cors: STORE_CORS,
+  database_url: DATABASE_URL,
   // database_url: "postgres://medusa:medusa@192.168.1.201:5432/tasteit",  
-  admin_cors: process.env.ADMIN_CORS,
+  admin_cors: ADMIN_CORS,
   // Uncomment the following lines to enable REDIS
   // redis_url: REDIS_URL
 };
