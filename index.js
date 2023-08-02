@@ -16,8 +16,7 @@ const loaders = require("@medusajs/medusa/dist/loaders/index").default;
       credentials: true,
     }));
 
-    const directory = process.cwd();
-
+    const directory = process.cwd()
     try {
       const { container } = await loaders({
         directory,
