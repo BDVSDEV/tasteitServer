@@ -72,6 +72,8 @@ const modules = {
     }
   },*/
   cacheService: {
+
+    // TODO: Prod is different. Redis
     resolve: "@medusajs/cache-inmemory",
     options: {
       ttl: 30,
@@ -81,6 +83,12 @@ const modules = {
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
+  http_compression: {
+    enabled: true,
+    level: 6,
+    memLevel: 8,
+    threshold: 1024,
+  },
   jwtSecret: process.env.JWT_SECRET,
   cookieSecret: process.env.COOKIE_SECRET,
   store_cors: STORE_CORS,
