@@ -1,6 +1,6 @@
-import { Product } from "./product";
 import { Store as MedusaStore } from "@medusajs/medusa";
 import { Entity, OneToMany } from "typeorm";
+import { Product } from "./product";
 import { User } from "./user";
 
 @Entity()

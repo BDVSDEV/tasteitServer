@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from "typeorm"
 
-export class AddUserStoreId1691053594427 implements MigrationInterface {
+export class AddUserStoreId1691058037175 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`ALTER TABLE "user" ADD "store_id" character varying`);
@@ -11,4 +11,5 @@ export class AddUserStoreId1691053594427 implements MigrationInterface {
         await queryRunner.query(`DROP INDEX "public"."UserStoreId"`);
         await queryRunner.query(`ALTER TABLE "user" DROP COLUMN "store_id"`);
     }
+
 }
