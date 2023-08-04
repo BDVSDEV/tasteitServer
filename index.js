@@ -63,3 +63,5 @@ const loaders = require("@medusajs/medusa/dist/loaders/index").default;
 
   await start();
 })();
+
+

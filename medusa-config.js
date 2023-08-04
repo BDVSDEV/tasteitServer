@@ -77,6 +77,7 @@ const modules = {
     resolve: "@medusajs/cache-inmemory",
     options: {
       ttl: 30,
+      location: "localhost:55000", 
     },
   },
 };
