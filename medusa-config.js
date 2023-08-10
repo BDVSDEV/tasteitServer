@@ -34,7 +34,7 @@ const STORE_CORS = process.env.STORE_CORS || "http://192.168.1.202:8000";
 //   process.env.DATABASE_URL || "postgres://localhost/medusa-store";
 
 const DATABASE_URL = process.env.DATABASE_URL ||
-  `postgres://postgres:postgres@192.168.1.201:5432/postgres`;
+  `postgres://postgres:postgres@back.tasteit.co.kr/:5432/postgres`;
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
