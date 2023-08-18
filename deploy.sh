@@ -14,7 +14,7 @@ git pull origin main
 # DEVELOPMENT
 npm i yarn -g
 yarn 
-pm2 start "yarn run dev" --name=MedusaServer
+pm2 start "yarn run start" --name=MedusaServer
 
 
 
